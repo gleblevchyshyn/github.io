@@ -1,0 +1,152 @@
+body { 
+    background-color: #000000;
+    color: rgb(201, 198, 198);
+}
+
+.Films {
+    display:flex;
+    flex-direction: column;
+    max-width: 1200px;
+    
+}
+.container
+{
+    padding: 0 2.5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Films h2 { 
+    margin-left: 7.5%;
+}
+
+.film {
+    display: flex;
+    padding: 25px 0;
+}
+
+.cont {
+    width: 45%;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width:45%;
+    padding-top: 100px;
+    text-align: left;
+}
+
+p {
+    line-height:1.5;
+    font-size: 14pt;
+}
+
+ h1, h2, h3, h4, h5 {
+    font-family: 'Lobster', cursive;
+}
+
+h3 {
+    margin-left:7.5%
+}
+
+.SiteName { 
+    margin-left: 15%;
+}
+
+.Films h3{
+    text-align: center;
+}
+
+.price {
+    color: blue;
+}
+
+img { 
+   cursor: pointer; 
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3vh;
+    background-color: rgb(50, 50, 50, 50);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    display: block;
+    padding: 0 15px;
+    color: #fff;
+    font-size: 13px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    transition:.5s;
+}
+
+nav li a {
+    text-decoration: none;
+    color:#fff;
+    transition: .5s;
+    padding:5px; 
+}
+
+nav ul:hover li a {
+    filter: blur(5px);
+}
+
+nav ul:hover li a:hover{
+    font-size: 15px;
+    filter:blur(0px);
+    background-color: rgba(0,0,0,0);
+} 
+
+footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    text-align: center;
+    background: rgb(30,30,30);
+}
+#reg {
+    margin-left:0%;
+}
+
+
+.Spisok {
+    list-style-type:none; 
+    padding: 10px 0px;
+    margin-left: 50px;
+
+}
+
+.Spisok a:visited {color: white;}  
+
+.Spisok a:hover { color: yellow}
+
+.Spisok a:active{
+    color: darkred;
+}
+
+.Spisok li:before{
+    content:"#";
+    padding-right: 6px;
+    font-size: 16px;
+    color: #00bf80;
+    font-weight: bold;
+}
+
+.something {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 75%;
+    height: 300px;
+    margin: auto;
+}

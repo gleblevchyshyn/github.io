@@ -1,0 +1,196 @@
+@import 'variables1';
+
+@mixin link-color($mycolor) {
+    &:visited{
+        color :$mycolor;
+    }
+    &:hover {
+        color:yellow
+    }
+&:active{
+    color:darkred;
+    }
+}
+
+ $my_border_radius:(
+     film_image: 20px,
+     buy_button: 3px,
+);
+
+@mixin my_button{
+    box-shadow: 0 3px rgb(126, 124, 124) inset;
+    width: 150px; 
+    margin: $mymargin;
+    font-weight: 700;
+    color: $color;
+    text-decoration: none;
+    padding: .5em 1em 1em;
+    border-radius: map-get($map:$my_border_radius , $key:buy_button );
+    background: rgb(50,50,50);
+    box-shadow: 0 -3px blue inset;
+    transition: 0.2s;
+    text-transform: uppercase;
+    &:hover { background: rgb(110, 110, 110);
+    }
+    &:active {
+        background: rgb(167, 165, 165);
+    }
+}
+// сделал .myflex для примера @extend
+.myflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body { 
+    background-color: #000000;
+    color: $color;
+}
+.Films {
+    display:flex;
+    flex-direction: column;
+    max-width: $max;
+    h2 {
+        margin-left: 7.5%;
+    }
+    h3 {
+        text-align: center;
+    }
+    .film {
+        display: flex;
+        padding: 25px 0;
+    }
+    
+    .cont {
+        width: 45%;
+    }
+    
+    .about {
+        display: flex;
+        flex-direction: column;
+        width:45%;
+        padding-top: 100px;
+        text-align: left;
+    }
+    .buy_button{
+        @include my_button;
+    }
+    img {
+        border-radius: map-get($map:$my_border_radius , $key: film_image);
+    }
+}
+
+.container
+{
+    padding: 0 2.5%;
+    max-width:$max;
+    margin: $mymargin;
+}
+
+p {
+    line-height:1.5;
+    font-size: 14pt;
+}
+
+ h1, h2, h3, h4, h5 {
+    font-family: 'Lobster', cursive;
+}
+
+h3 {
+    margin-left:7.5%
+}
+
+.SiteName { 
+    margin-left: 15%;
+}
+
+
+.price {
+    color: blue;
+}
+
+img { 
+   cursor: pointer; 
+}
+
+.menu {
+    @extend .myflex;
+    min-height: 3vh;
+    background-color: rgb(50, 50, 50);
+}
+
+nav {
+    ul {
+        @extend .myflex;
+    li {
+        display: block;
+        padding: 0 15px;
+        color: #fff;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        transition:.5s;
+        a {
+            text-decoration: none;
+            color:#fff;
+            transition: .5s;
+            padding:5px; 
+        }
+    }
+    &:hover
+    {
+        li{
+            a{
+                filter: blur(5px);
+                &:hover{
+                    font-size: 15px;
+                    filter:blur(0px);
+                    background-color: rgba(0,0,0,0);
+                }
+            }
+        }
+    }    
+}
+}
+
+
+footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    text-align: center;
+    background: rgb(30,30,30);
+}
+#reg {
+    margin-left:0%;
+}
+
+
+.Spisok {
+    list-style-type:none; 
+    padding: 10px 0px;
+    margin-left: 50px;
+    a
+    {
+       @include link-color(grey);
+    }
+    li{
+        &:before{
+            content:"#";
+            padding-right: 6px;
+            font-size: 16px;
+            color: #00bf80;
+            font-weight: bold; 
+        }
+    }
+}
+
+.something {
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 75%;
+    height: 300px;
+    margin: auto;
+}
