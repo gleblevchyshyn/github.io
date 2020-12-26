@@ -44,7 +44,9 @@ body {
     .Films .buy_button:active {
       background: #a7a5a5; }
   .Films img {
-    border-radius: 20px; }
+    border-radius: 20px;
+    opacity: 1; transition: opacity 0.3s;}
+    .Films img[data-src] { opacity: 0; }
 
 .container {
   padding: 0 2.5%;

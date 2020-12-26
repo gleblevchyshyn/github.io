@@ -1,9 +1,10 @@
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=yes">
         <title>Прокат фильмов</title> 
-        <link href="main.css" rel="stylesheet">   
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
+         <!-- <link href="main.css" rel="stylesheet">     -->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">   
     </head>
     <body>  
         <header>
@@ -132,7 +133,11 @@
                     <h3 id="horror">Horror</h3>
                     <div class="film">
                         <div class="cont"><h4 id="halloween">Halloween</h4>
-                            <img src="img/Halloween.jpg" width="300" height="350">
+                            <picture>
+                                <source media="(min-width:740px)" srcset="img/Halloween.jpg">
+                                <source media="(min-width:632px)" srcset="img/Halloween_2.jpg">
+                                <img data-src="img/Halloween_3.jpg">
+                            </picture>
                             <h5>Price: <em class="price">###</em></h5>
                         </div>
                         <div class="about">
@@ -147,7 +152,11 @@
                     <div class="film">
                         <div class="cont">
                             <h4 id="collector">The Collector</h4>
-                            <img src="img/The Collector.jpg" width="300" height="350">
+                            <picture>
+                                <source media="(min-width:740px)" srcset="img/TheCollector.jpg">
+                                <source media="(min-width:632px)" srcset="img/TheCollector_2.jpg">
+                                <img data-src="img/TheCollector_3.jpg">
+                            </picture>
                             <h5>Price: <em class="price">###</em></h5>
                         </div>
                         <div class="about">
@@ -166,7 +175,11 @@
                     <div class="film">
                         <div class="cont">
                             <h4 id="interstellar">Interstellar</h4>
-                            <img src="img/Interstellar.jpg" width="300" height="350">
+                            <picture>
+                                <source media="(min-width:740px)" srcset="img/Interstellar.jpg">
+                                <source media="(min-width:632px)" srcset="img/Interstellar_2.jpg">
+                                <img data-src="img/Interstellar_3.jpg">
+                            </picture>
                             <h5>Price: <em class="price">###</em></h5>
                         </div>
                         <div class="about">
@@ -181,7 +194,11 @@
                     <div class="film">
                         <div class="cont">
                             <h4 id="harrypotterandthechamberofsecrets">Harry Potter and the Chamber of Secrets</h4>
-                            <img src="img/harry.jpg" width="300" height="350">
+                            <picture>
+                                <source media="(min-width:740px)" srcset="img/harry.jpg">
+                                <source media="(min-width:632px)" srcset="img/harry_2.jpg">
+                                <img data-src="img/harry_3.jpg">
+                            </picture>
                             <h5>Price: <em class="buy_price">###</em></h5>
                         </div>
                         <div class="about">
@@ -199,8 +216,12 @@
                     <h3 id="fighters">Fighters</h3>
                     <div class="film">
                         <div class="cont">
-                             <h4 id="johnwick">Johnwick</h4>
-                            <img src="img/johnwick.jpg" width="300" height="350">
+                            <h4 id="johnwick">Johnwick</h4>
+                            <picture>
+                                <source media="(min-width:740px)" srcset="img/johnwick.jpg">
+                                <source media="(min-width:632px)" srcset="img/johnwick_2.jpg">
+                                <img data-src="img/johnwick_3.jpg">
+                            </picture> 
                             <h5>Price: <em class="price">###</em></h5>
                         </div>
                         <div class="about">
@@ -214,7 +235,11 @@
                     <div class="film">
                         <div class="cont">
                             <h4 id="deadpool">Deadpool</h4>
-                            <img src="img/deadpool.jpg" width="300" height="350">
+                            <picture>
+                                <source media="(min-width:740px)" srcset="img/deadpool.jpg">
+                                <source media="(min-width:632px)" srcset="img/deadpool_2.jpg">
+                                <img data-src="img/deadpool_3.jpg">
+                            </picture>
                             <h5>Price: <em class="price">###</em></h5>
                         </div>
                         <div class="about">
@@ -407,11 +432,14 @@
                 </div>
             </div>
         </div>
-        <script src="js/script.js"></script>
-        <script src="js/popup.js"></script>
-        <script src="js/validation.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="js/JQ.js"></script>
+        <script defer src = "js/loadCSS.js"></script>
+        <script defer src="js/css.js"></script>
+        <script defer src="js/script.js"></script>
+        <script defer defer src="js/popup.js"></script>
+        <script defer src="js/validation.js"></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script defer src="js/JQ.js"></script>
+        <script defer src="js/lazyload.js"></script>
     </body>
 </html> 
